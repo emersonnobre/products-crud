@@ -1,5 +1,5 @@
 <mat-card>
-    <mat-card-title>Novo produto</mat-card-title>
+    <mat-card-title>Atualizar produto</mat-card-title>
     <form>
         <mat-form-field>
             <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name">
@@ -8,11 +8,6 @@
             <input matInput placeholder="Preço" [(ngModel)]="product.price" name="price">
         </mat-form-field>
     </form>
-    <button mat-raised-button color="primary" (click)="createProduct()">
-        Fazer algo
-    </button> <!-- Binding Event -->
-    
-    <button mat-raised-button (click)="cancel()">
-        Cancelar
-    </button> <!-- Binding Event -->
+    <button class="msg-success" mat-button (click)="updateProduct()">Atualizar</button>
+    <button mat-button (click)="cancel()">Cancelar</button>
 </mat-card>

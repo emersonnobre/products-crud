@@ -1,0 +1,9 @@
+button {
+    margin-right: 5px;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}

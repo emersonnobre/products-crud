@@ -1,9 +1,14 @@
 /* Modules */
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms'
+import localePt from '@angular/common/locales/pt'
+import { registerLocaleData } from '@angular/common'
+
+registerLocaleData(localePt)
 
 /* Components */
 import { HeaderComponent } from './components/template/header/header.component';
@@ -21,10 +26,20 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button'
 import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatDialogModule } from '@angular/material/dialog'
 
 /* Directives */
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { ProductRead2TableComponent } from './components/product/product-read2-table/product-read2-table.component';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+import { ConfirmModalComponent } from './components/template/confirm-modal/confirm-modal.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +51,11 @@ import { ForDirective } from './directives/for.directive';
     ProductsComponent,
     RedDirective,
     ForDirective,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductReadComponent,
+    ProductRead2TableComponent,
+    ProductUpdateComponent,
+    ConfirmModalComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +67,22 @@ import { ForDirective } from './directives/for.directive';
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatDialogModule,
   ],
-  providers: [],
+  entryComponents: [
+
+  ],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt-BR'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
