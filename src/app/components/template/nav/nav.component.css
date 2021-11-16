@@ -1,0 +1,19 @@
+.sidenav {
+    background-color: var(--primary-color);
+    width: 130px;
+}
+
+.sidenav i {
+    margin-right: 5px;
+}
+
+.nav-list > a:hover {
+    background-color: var(--alternative-color);
+}
+
+.content {
+    padding: 16px;
+    color: #000;
+    background-color: #fff;
+    position: relative;
+}
