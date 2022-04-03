@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta Bic Clássica",
+      "price": 1.99
+    },
+    {
+      "name": "Caderno Tilibra de 20 matérias",
+      "price": "19.29",
+      "id": 2
+    }
+  ]
+}
